@@ -84,7 +84,7 @@ class Track {
       title: json["tracks"]["items"][0]["name"], 
       imageURL: json["tracks"]["items"][0]["album"]["images"][0]["url"],
       name: json["tracks"]["items"][0]["artists"][0]["name"], 
-      preview: json["tracks"]["items"][0]["preview_url"]);
+      preview: json["tracks"]["items"][0]?["preview_url"]);
   }
 }
 
@@ -131,11 +131,6 @@ class Track2 {
       preview: json["tracks"]["items"][0]["preview_url"]);
   }
 }
-
-  void themeChange() {
-
-  }
-
 
 class SongCard extends StatefulWidget {
   const SongCard({super.key});
